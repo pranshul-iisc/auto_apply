@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-from browser_use import Agent, Browser, BrowserConfig
+from browser_use import Agent, Browser, BrowserProfile
 from browser_use import ChatGoogle, ChatOpenAI, ChatAnthropic
 
 def get_llm():
@@ -84,6 +84,11 @@ You must navigate to the URL and complete all forms and fields required.
 Below is the candidate's profile information to use for filling out the form:
 {json.dumps(profile, indent=2)}
 
+Authentication Instructions:
+- If the website requires you to sign in or create an account before applying, ALWAYS choose "Continue with Google", "Sign in with Google", or "Login with Google" if that option is available.
+- Do NOT create a new account using email/password if Google Sign-In is available.
+- If Google asks you to choose an account, select the already signed-in Google account.
+
 Important Instructions:
 1. Locate all the text fields, dropdowns, check boxes, radio buttons, and sections (such as Name, Email, Phone, Address, Links like LinkedIn/GitHub, Education, Experience, Skills, Preferences, EEO voluntary fields) and fill them in accurately using the candidate profile.
 2. If there is a file input field to upload a resume or CV, you MUST upload the resume located at the path: "{resume_path}". Use the `upload_file` action with the index of the file input and this path.
@@ -146,8 +151,11 @@ async def main():
     
     # Initialize browser
     # Job application requires persistence and visual review, so we use config
-    config = BrowserConfig(headless=headless)
-    browser = Browser(config=config)
+    browser_profile = BrowserProfile(
+                                        headless=headless,
+                                        executable_path=r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe",    
+                                    )
+    browser = Browser(browser_profile=browser_profile)
     
     try:
         # Loop through each job URL and run application
