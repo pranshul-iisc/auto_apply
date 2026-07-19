@@ -1,0 +1,6 @@
+browser-use
+python-dotenv
+langchain-google-genai
+langchain-openai
+langchain-anthropic
+playwright

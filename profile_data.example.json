@@ -1,0 +1,59 @@
+{
+  "personal_info": {
+    "first_name": "Mike",
+    "last_name": "Wazowski",
+    "email": "mike.wazowski@gmail.com",
+    "phone": "+1-555-123-4567",
+    "address_line1": "123 Main Street",
+    "city": "San Francisco",
+    "state": "CA",
+    "zip_code": "94105",
+    "country": "United States",
+    "linkedin_url": "https://www.linkedin.com/in/mike-wazowski"
+  },
+  "resume_path": "C:\\path\\to\\resume.pdf",
+  "education": [
+    {
+      "school": "Monsters University, Berkeley",
+      "degree": "Bachelor of Scaring Arts",
+      "major": "Scare Program",
+      "gpa": "3.8",
+      "start_date": "September 2018",
+      "end_date": "May 2022"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Monsters, Inc.",
+      "title": "Scare Assistant",
+      "location": "San Francisco, CA",
+      "start_date": "June 2021",
+      "end_date": "Present",
+      "description": "Assisted Jake Sulley, a record-bresaking Scarer"
+    },
+    {
+      "company": "Monsters, Inc.",
+      "title": "Mailroom Clerk",
+      "location": "San Francisco, CA",
+      "start_date": "June 2021",
+      "end_date": "August 2021",
+      "description": "Just did mailroom stuff"
+    }
+  ],
+  "skills": [
+    "Python", "JavaScript", "Go", "SQL", "Git", "Docker", "REST APIs"
+  ],
+  "job_preferences": {
+    "desired_role": "Software Engineer",
+    "notice_period": "2 weeks",
+    "salary_expectation": "$120,000",
+    "sponsorship_required": "No",
+    "authorized_to_work": "Yes"
+  },
+  "voluntary_eeo": {
+    "gender": "Male",
+    "race_ethnicity": "Decline to Self-Identify",
+    "veteran_status": "I am not a protected veteran",
+    "disability_status": "No, I don't have a disability"
+  }
+}
